@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 class Solution {
     public int[] runningSum(int[] nums) {
         /** Array to hold result of Running Sum */
@@ -21,8 +23,22 @@ class Solution {
  * user
  */
 class Main {
-    public int main() {
+    public void main() throws IOException {
+        // Reading Outputs
+        int[] input = getInput();
+
+        // Getting Solutions
         Solution sln = new Solution();
-        sln.runningSum();
+        int[] r = sln.runningSum(input);
+
+        // Printing Results
+        System.out.println(r);
+    }
+
+    public int[] getInput() throws IOException {
+        System.out.print("Enter your Array:");
+        int arr = System.in.read();
+        int[] r = { arr };
+        return r;
     }
 }
