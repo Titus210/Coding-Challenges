@@ -8,6 +8,7 @@ class Solution {
          * number and adding the sum into the [res] array
          */
         for (int i = 0; i < nums.length; i++) {
+            res[i] = nums[i] + nums[++i];
         }
 
         return res;
