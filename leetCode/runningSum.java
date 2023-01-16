@@ -46,13 +46,17 @@ class Solution {
 class Main {
     public static void main(String[] args) {
         // Reading Outputs
-        int[] input = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        int[] input = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
         // Getting Solutions
         Solution sln = new Solution();
         int[] r = sln.runningSum(input);
 
         // Printing Results
-        System.out.println(r);
+        System.out.print("[ ");
+        for (int i = 0; i < r.length - 1; i++) {
+            System.out.printf("%d,", r[i]);
+        }
+        System.out.println(" ]");
     }
 }
