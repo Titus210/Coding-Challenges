@@ -21,17 +21,20 @@
 class Solution {
     public int[] runningSum(int[] nums) {
         /** Array to hold result of Running Sum */
-        int[] res = {};
 
         /**
          * Iterated over the array adding the number in the current index with the next
          * number and adding the sum into the [res] array
          */
         for (int i = 0; i < nums.length; i++) {
-            res[i] = nums[i] + nums[++i];
+            if (i - 1 < 0) {
+                nums[i] = nums[i] + 0;
+            } else {
+                nums[i] = nums[i - 1] + nums[i];
+            }
         }
 
-        return res;
+        return nums;
     }
 }
 
