@@ -53,4 +53,66 @@
 // s
 // ```
 
+use strict';
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+
+let inputString = '';
+let currentLine = 0;
+
+process.stdin.on('data', inputStdin => {
+    inputString += inputStdin;
+});
+
+process.stdin.on('end', _ => {
+    inputString = inputString.trim().split('\n').map(string => {
+        return string.trim();
+    });
+    
+    main();    
+});
+
+function readLine() {
+    return inputString[currentLine++];
+}
+
+/*
+ * Complete the vowelsAndConsonants function.
+ * Print your output using 'console.log()'.
+ */
+function vowelsAndConsonants(s) {
+    // Have two loops that check for vowels and check for non vowels in that order
+    // Use switch statement as a check for the vowels
+  for (i = 0; i < s.length; i++) {
+    switch (s[i]) {
+      case "a":
+        console.log("a");
+        break;
+      case "e":
+        console.log("e");
+        break;
+      case "i":
+        console.log("i");
+        break;
+      case "o":
+        console.log("o");
+        break;
+      case "u":
+        console.log("u");
+        break;
+    }
+  }
+      
+}
+
+
+function main() {
+    const s = readLine();
+    
+    vowelsAndConsonants(s);
+}
+
+main()
+
 
