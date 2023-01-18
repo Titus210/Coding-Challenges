@@ -53,7 +53,7 @@
 // s
 // ```
 
-use strict';
+"use strict";
 
 process.stdin.resume();
 process.stdin.setEncoding('utf-8');
@@ -82,8 +82,8 @@ function readLine() {
  * Print your output using 'console.log()'.
  */
 function vowelsAndConsonants(s) {
-    // Have two loops that check for vowels and check for non vowels in that order
-    // Use switch statement as a check for the vowels
+  // Have two loops that check for vowels and check for non vowels in that order
+  // Use switch statement as a check for the vowels
   for (i = 0; i < s.length; i++) {
     switch (s[i]) {
       case "a":
@@ -103,7 +103,13 @@ function vowelsAndConsonants(s) {
         break;
     }
   }
-      
+
+  //   Prints all characters that are not aeiou
+  for (i = 0; i < s.length; i++) {
+    if (s[i] !== ("a" || "e" || "i" || "o" || "u")) {
+      console.log(s[i]);
+    }
+  }
 }
 
 
