@@ -66,13 +66,13 @@ function readLine() {
  **/
 function getSecondLargest(nums) {
   // Complete the function
-    nums.sort((a, b) => b - a);
-    
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] < nums[0]) {
-            return nums[i];
-        }
+  nums.sort((a, b) => b - a);
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] < nums[0]) {
+      return nums[i];
     }
+  }
 }
 
 // Objective
@@ -122,13 +122,13 @@ function getSecondLargest(nums) {
  * Use console.log() to print to stdout.
  */
 function reverseString(s) {
-      try {
-        let r = s.split("").reverse().join("");
-        console.log(r);
-      } catch (e) {
-        console.log("s.split is not a function");
-        console.log(s);
-      }
+  try {
+    let r = s.split("").reverse().join("");
+    console.log(r);
+  } catch (e) {
+    console.log("s.split is not a function");
+    console.log(s);
+  }
 }
 
 // Objective
@@ -211,5 +211,7 @@ function reverseString(s) {
  * If 'a' is negative, throw an Error with the message "Negative Error"
  */
 function isPositive(a) {
-    
+  if (a > 0) return "YES";
+  if (a == 0) throw Error("Zero Error");
+  else throw Error("Negative Error");
 }
