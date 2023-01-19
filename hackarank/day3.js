@@ -126,7 +126,7 @@ function reverseString(s) {
         let r = s.split("").reverse().join("");
         console.log(r);
       } catch (e) {
-        console.log(e);
+        console.log("s.split is not a function");
         console.log(s);
       }
 }
