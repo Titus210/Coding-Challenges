@@ -122,5 +122,11 @@ function getSecondLargest(nums) {
  * Use console.log() to print to stdout.
  */
 function reverseString(s) {
-    
+      try {
+        let r = s.split("").reverse().join("");
+        console.log(r);
+      } catch (e) {
+        console.log(e);
+        console.log(s);
+      }
 }
