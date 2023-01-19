@@ -87,29 +87,15 @@ function readLine() {
 function vowelsAndConsonants(s) {
   // Have two loops that check for vowels and check for non vowels in that order
   // Use switch statement as a check for the vowels
-  for (i = 0; i < s.length; i++) {
-    switch (s[i]) {
-      case "a":
-        console.log("a");
-        break;
-      case "e":
-        console.log("e");
-        break;
-      case "i":
-        console.log("i");
-        break;
-      case "o":
-        console.log("o");
-        break;
-      case "u":
-        console.log("u");
-        break;
+  for (let i = 0; i < s.length; i++) {
+    if ("aeiou".indexOf(s[i]) !== -1) {
+      console.log(s[i]);
     }
   }
 
   //   Prints all characters that are not aeiou
   for (let i = 0; i < s.length; i++) {
-    if (s[i] !== ("a" || "e" || "i" || "o" || "u")) {
+    if ("aeiou".indexOf(s[i]) === -1) {
       console.log(s[i]);
     }
   }
