@@ -126,6 +126,16 @@ function main() {
  * objects: an array of objects with integer properties 'x' and 'y'
  */
 function getCount(objects) {
-    let count;
-    return count;
+  let count = 0;
+
+  let x = objects[0].x;
+  let y = objects[0].y;
+
+  for (let i = 0; i < x.length; i++) {
+       if (x[i] == y[i]) {
+         count += 1;
+       }
+  }
+
+  return count;
 }
