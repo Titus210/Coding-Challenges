@@ -93,7 +93,7 @@ if (
 
 // We then store these values in an array, [14, 10], sort the array, and return the sorted array, [10, 14], as our answer.
 
-"use strict";
+("use strict");
 
 process.stdin.resume();
 process.stdin.setEncoding("utf-8");
@@ -129,7 +129,15 @@ function readLine() {
  * literals: The tagged template literal's array of strings.
  * expressions: The tagged template literal's array of expression values (i.e., [area, perimeter]).
  */
-function sides(literals, ...expressions) {}
+function sides(literals, ...expressions) {
+  const [a, p] = [...expressions];
+  let sides = [];
+
+  sides[0] = (p + Math.sqrt(p * p - 16 * a)) / 4;
+  sides[1] = (p - Math.sqrt(p * p - 16 * a)) / 4;
+
+  sides.sort();
+}
 
 function main() {
   let s1 = +readLine();
