@@ -145,7 +145,23 @@ function getCount(objects) {
  * 1. A constructor that takes an array of integer side lengths.
  * 2. A 'perimeter' method that returns the sum of the Polygon's side lengths.
  */
+  class Polygon {
+    sides = [];
+    constructor(s) {
+      this.sides = s;
+    }
 
+    perimeter() {
+      //   Total Perimeter
+      let totalP = 0;
+
+      this.sides.forEach((side) => {
+        totalP += side;
+      });
+
+      return totalP;
+    }
+  }
 
 const rectangle = new Polygon([10, 20, 10, 20]);
 const square = new Polygon([10, 10, 10, 10]);
